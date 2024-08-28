@@ -15,7 +15,7 @@ from sklearn.metrics import precision_score, recall_score, accuracy_score, f1_sc
 ### Préparation des données 
 
 base_path = os.path.dirname(os.path.abspath(__file__))
-data_path = os.path.join(base_path, "..", "Downloads", "fraud_detection_data.csv")
+data_path = os.path.join(base_path, "..", "data", "fraud_detection_data.csv")
 try:
     df = pd.read_csv(data_path)
     print("Data loaded successfully.")
