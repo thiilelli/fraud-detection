@@ -1,15 +1,21 @@
+import os
+import ast
+import pickle
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 from collections import Counter
 from scipy import stats
-import numpy as np
-import ast
-import os
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import GridSearchCV, train_test_split
+from sklearn.metrics import precision_score, recall_score, accuracy_score, f1_score, confusion_matrix, roc_curve, auc
 
-# Configuration des chemins relatifs pour assurer la portabilité du script
+
+
+### Préparation des données 
+
 base_path = os.path.dirname(os.path.abspath(__file__))
 data_path = os.path.join(base_path, "..", "Downloads", "fraud_detection_data.csv")
-
-# Tentative de chargement des données avec gestion des erreurs pour capturer les problèmes courants de fichier
 try:
     df = pd.read_csv(data_path)
     print("Data loaded successfully.")
@@ -95,13 +101,7 @@ except Exception as e:
     exit(1)
 
 
-
-
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import GridSearchCV, train_test_split
-import numpy as np
-import os
-import pickle
+# Construction et entraînement du modèle
 
 # Configuration des chemins pour assurer la portabilité du code sur différents environnements d'exécution
 base_path = os.path.dirname(os.path.abspath(__file__))
@@ -196,19 +196,7 @@ except Exception as e:
     exit(1)
 
 
-
-
-
-
-
-
-
-############## Evaluating model ######
-import pandas as pd
-from sklearn.metrics import precision_score, recall_score, accuracy_score, f1_score, confusion_matrix, roc_curve, auc
-import matplotlib.pyplot as plt
-import pickle
-import os
+############## Evaluation du modèle ######
 
 # Configuration des chemins pour la portabilité du script
 base_path = os.path.dirname(os.path.abspath(__file__))
