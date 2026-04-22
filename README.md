@@ -4,11 +4,18 @@ Automatic detection of fraudulent bank transactions using a Random Forest classi
 
 ## Results
 
+## Results
+
 | Metric | Value |
 |---|---|
-| Optimizer | GridSearchCV (5-fold CV) |
-| Scoring | Precision |
+| Precision | 1.00 |
+| Recall | 0.625 |
+| F1 Score | 0.769 |
+| Accuracy | 99.1% |
+| Best params | max_depth=5, n_estimators=20 |
 | Threshold | 0.19 (adjusted for class imbalance) |
+| Dataset | 1743 transactions, 46 fraud cases (2.6%) |
+| ROC AUC | 0.99 |
 
 ## Pipeline
 
