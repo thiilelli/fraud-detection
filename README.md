@@ -4,8 +4,6 @@ Automatic detection of fraudulent bank transactions using a Random Forest classi
 
 ## Results
 
-## Results
-
 | Metric | Value |
 |---|---|
 | Precision | 1.00 |
